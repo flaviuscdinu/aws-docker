@@ -6,4 +6,8 @@ Docker image for an aws development environment using centos7
 * Pip
 * Aws-cli
 * Terraform
-* Boto3 
+* Boto3
+
+
+## Running the containter
+docker run -ti --name aws -v host_path_to_mount:docker_path_to_mount 

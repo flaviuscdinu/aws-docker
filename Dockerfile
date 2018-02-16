@@ -1,7 +1,8 @@
 FROM centos:latest
 
-LABEL version="0.1.0"
+LABEL version="0.1.1"
 
+RUN yum install -y nodejs
 RUN yum install -y yum-utils && yum groupinstall -y development
 RUN yum install -y vim
 RUN yum install -y git-all.noarch wget

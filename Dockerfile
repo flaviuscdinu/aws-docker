@@ -1,6 +1,6 @@
 FROM centos:latest
 
-LABEL version="0.1"
+LABEL version="0.1.0"
 
 RUN yum install -y yum-utils && yum groupinstall -y development
 RUN yum install -y vim

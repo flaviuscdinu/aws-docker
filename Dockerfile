@@ -16,3 +16,6 @@ RUN cd /tmp \
     && unzip terraform_0.11.3_linux_amd64.zip \
     && mv terraform /usr/local/bin/ \
     && rm -rf terraform_0.11.3_linux_amd64.zip
+
+RUN yum install -y epel-release
+RUN yum install -y ansible

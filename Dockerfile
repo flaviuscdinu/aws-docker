@@ -13,10 +13,10 @@ RUN pip3.6 install boto3
 RUN pip3.6 install azure-cli
 
 RUN cd /tmp \
-    && wget https://releases.hashicorp.com/terraform/0.11.3/terraform_0.11.3_linux_amd64.zip \
-    && unzip terraform_0.11.3_linux_amd64.zip \
+    && wget https://releases.hashicorp.com/terraform/0.11.8/terraform_0.11.8_linux_amd64.zip \
+    && unzip terraform_0.11.8_linux_amd64.zip \
     && mv terraform /usr/local/bin/ \
-    && rm -rf terraform_0.11.3_linux_amd64.zip
+    && rm -rf terraform_0.11.8_linux_amd64.zip
 
 RUN yum install -y epel-release
 RUN yum install -y ansible

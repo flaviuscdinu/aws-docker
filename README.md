@@ -5,6 +5,7 @@ Docker image for an aws development environment using centos7
 * Python3
 * Pip
 * Aws-cli
+* Azure-cli
 * Terraform
 * Boto3
 * Ansible

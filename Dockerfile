@@ -10,6 +10,7 @@ RUN yum install -y python36u python36u-pip python36u-devel python36u-wheel pytho
 
 RUN pip3.6 install awscli
 RUN pip3.6 install boto3
+RUN pip3.6 install azure-cli
 
 RUN cd /tmp \
     && wget https://releases.hashicorp.com/terraform/0.11.3/terraform_0.11.3_linux_amd64.zip \

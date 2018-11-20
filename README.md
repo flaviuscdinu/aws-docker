@@ -6,9 +6,11 @@ Docker image for an aws development environment using centos7
 * Pip
 * Aws-cli
 * Azure-cli
+* Google Cloud cli
 * Terraform
 * Boto3
 * Ansible
+* Chef
 * Nodejs
 
 ## Running the containter

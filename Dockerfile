@@ -12,10 +12,10 @@ RUN pip3.6 install awscli
 RUN pip3.6 install boto3
 
 RUN cd /tmp \
-    && wget https://releases.hashicorp.com/terraform/0.11.8/terraform_0.11.8_linux_amd64.zip \
-    && unzip terraform_0.11.8_linux_amd64.zip \
+    && wget https://releases.hashicorp.com/terraform/0.11.10/terraform_0.11.10_linux_amd64.zip \
+    && unzip terraform_0.11.10_linux_amd64.zip \
     && mv terraform /usr/local/bin/ \
-    && rm -rf terraform_0.11.8_linux_amd64.zip
+    && rm -rf terraform_0.11.10_linux_amd64.zip
 
 RUN yum install -y epel-release
 RUN yum install -y ansible
@@ -35,3 +35,7 @@ gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg \n\
 \t     https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg' > /etc/yum.repos.d/google-cloud-sdk.repo
 
 RUN yum install google-cloud-sdk -y
+
+RUN cd /tmp \
+    && wget https://packages.chef.io/files/stable/chefdk/3.5.13/el/7/chefdk-3.5.13-1.el7.x86_64.rpm \
+    && rpm -ivh chefdk-3.5.13-1.el7.x86_64.rpm

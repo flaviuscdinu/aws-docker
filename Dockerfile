@@ -12,10 +12,10 @@ RUN pip3.6 install awscli
 RUN pip3.6 install boto3
 
 RUN cd /tmp \
-    && wget https://releases.hashicorp.com/terraform/0.11.10/terraform_0.11.10_linux_amd64.zip \
-    && unzip terraform_0.11.10_linux_amd64.zip \
+    && wget https://releases.hashicorp.com/terraform/0.12.0/terraform_0.12.0_linux_amd64.zip \
+    && unzip terraform_0.12.0_linux_amd64.zip \
     && mv terraform /usr/local/bin/ \
-    && rm -rf terraform_0.11.10_linux_amd64.zip
+    && rm -rf terraform_0.12.0_linux_amd64.zip
 
 RUN yum install -y epel-release
 RUN yum install -y ansible
@@ -23,7 +23,7 @@ RUN yum install -y nodejs
 
 RUN rpm --import https://packages.microsoft.com/keys/microsoft.asc
 RUN sh -c 'echo -e "[azure-cli]\nname=Azure CLI\nbaseurl=https://packages.microsoft.com/yumrepos/azure-cli\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/azure-cli.repo'
-RUN yum install azure-cli -y
+RUN yum -y install azure-cli
 
 RUN echo $'[google-cloud-sdk] \n\
 name=Google Cloud SDK \n\
